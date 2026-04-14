@@ -1,0 +1,18 @@
+typeset -U path PATH
+
+# Go
+export GOPATH=$HOME/go
+path+=(/usr/local/go/bin $GOPATH/bin)
+
+# Zig
+path+=(/opt/zig-x86_64-linux-0.16.0-dev.627+e6e4792a5)
+
+# .NET
+export DOTNET_ROOT=$HOME/.dotnet
+path+=($DOTNET_ROOT $DOTNET_ROOT/tools)
+
+# User local
+path+=($HOME/.local/bin)
+
+# Rust
+. "$HOME/.cargo/env"
