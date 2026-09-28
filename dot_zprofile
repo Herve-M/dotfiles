@@ -1,0 +1,5 @@
+# Go
+export PATH="$PATH:/usr/local/go/bin"
+
+# Zig
+export PATH="$PATH:/opt/zig-x86_64-linux-0.16.0-dev.627+e6e4792a5"

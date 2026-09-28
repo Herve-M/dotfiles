@@ -11,6 +11,11 @@ path+=(/opt/zig-x86_64-linux-0.16.0-dev.627+e6e4792a5)
 export DOTNET_ROOT=$HOME/.dotnet
 path+=($DOTNET_ROOT $DOTNET_ROOT/tools)
 
+export SSL_CERT_DIR="$HOME/.aspnet/dev-certs/trust:/usr/lib/ssl/certs"
+
+## Aspire
+path+=($HOME/.aspire/bin)
+
 # User local
 path+=($HOME/.local/bin)
 
