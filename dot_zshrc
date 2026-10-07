@@ -107,6 +107,7 @@ export LANG=en_US.UTF-8
 alias bw="flatpak run --command=bw com.bitwarden.desktop"
 
 # Completions
+eval "$(chezmoi completion zsh)"
 eval "$(task --completion zsh)"
 eval "$(grove completion zsh)"
 eval "$(bw completion --shell zsh); compdef _bw bw;"
@@ -118,3 +119,8 @@ eval "$(codex completion zsh)"
 
 # Integration
 eval "$(grove switch shell-init)"
+
+# AI tools
+load-ai-token() {
+    export AI_MCP_GITHUB_TOKEN="Bearer $(bw get item ca98b49f-8feb-4700-b377-b07d00eb3c59 | jq -er '.fields[] | select(.name == "ai_mcp_token") | .value')"
+}
