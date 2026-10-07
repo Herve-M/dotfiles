@@ -1,0 +1,214 @@
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+
+approvals_reviewer = "auto_review"
+approval_policy = "on-request"
+
+# sandbox
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true
+
+[shell_environment_policy]
+inherit = "all"
+include_only = [
+    "HOME",
+    "LOGNAME",
+    "PATH",
+    "SHELL",
+    "USER",
+    "USERNAME",
+    "TMPDIR",
+    "TEMP",
+    "TMP",
+
+    "SSH_AUTH_SOCK",
+
+    "HERDR_*"
+]
+
+project_doc_fallback_filenames = ["CONTRIBUTING.md"]
+
+[projects."/home/herve-m/source/repos/ts-cloudflare-apps"]
+trust_level = "trusted"
+
+[projects."/home/herve-m/source/repos-wk/ts-cloudflare-apps"]
+trust_level = "trusted"
+
+[projects."/home/herve-m/source/repos/ts-baseapps-ai"]
+trust_level = "trusted"
+
+[projects."/home/herve-m/source/repos-wk/ts-baseapps-ai"]
+trust_level = "trusted"
+
+[projects."/home/herve-m/source/repos-wk/net-baseapp-ai"]
+trust_level = "trusted"
+
+[projects."/home/herve-m/source/repos-wk/agent-skills"]
+trust_level = "trusted"
+
+[[skills.config]]
+path = "/home/herve-m/.codex/skills/.system/imagegen/SKILL.md"
+enabled = false
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[marketplaces.cloudflare]
+last_updated = "2026-08-20T16:07:15Z"
+last_revision = "f96bff754e428838818017f75817f0f9428acd48"
+source_type = "git"
+source = "https://github.com/cloudflare/skills.git"
+
+[marketplaces.dotnet-agent-skills]
+source_type = "git"
+source = "https://github.com/dotnet/skills.git"
+
+[plugins."superpowers@openai-curated-remote"]
+enabled = false
+
+[plugins."cloudflare@openai-curated-remote"]
+enabled = false
+
+# mattpocock/skills
+[[skills.config]]
+name = "ask-matt"
+enabled = false
+
+[[skills.config]]
+name = "code-review"
+enabled = false
+
+[[skills.config]]
+name = "codebase-design"
+enabled = false
+
+[[skills.config]]
+name = "diagnosing-bugs"
+enabled = false
+
+[[skills.config]]
+name = "domain-modeling"
+enabled = false
+
+[[skills.config]]
+name = "grill-me"
+enabled = false
+
+[[skills.config]]
+name = "grill-with-docs"
+enabled = false
+
+[[skills.config]]
+name = "grilling"
+enabled = false
+
+[[skills.config]]
+name = "handoff"
+enabled = false
+
+[[skills.config]]
+name = "implement"
+enabled = false
+
+[[skills.config]]
+name = "improve-codebase-architecture"
+enabled = false
+
+[[skills.config]]
+name = "prototype"
+enabled = false
+
+[[skills.config]]
+name = "research"
+enabled = false
+
+[[skills.config]]
+name = "resolving-merge-conflicts"
+enabled = false
+
+[[skills.config]]
+name = "retro"
+enabled = false
+
+[[skills.config]]
+name = "setup-matt-pocock-skills"
+enabled = false
+
+[[skills.config]]
+name = "tdd"
+enabled = false
+
+[[skills.config]]
+name = "teach"
+enabled = false
+
+[[skills.config]]
+name = "to-questionnaire"
+enabled = false
+
+[[skills.config]]
+name = "to-spec"
+enabled = false
+
+[[skills.config]]
+name = "to-tickets"
+enabled = false
+
+[[skills.config]]
+name = "triage"
+enabled = false
+
+[[skills.config]]
+name = "wait-what"
+enabled = false
+
+[[skills.config]]
+name = "wayfinder"
+enabled = false
+
+[[skills.config]]
+name = "wizard"
+enabled = false
+
+[[skills.config]]
+name = "writing-for-agents"
+enabled = false
+
+[features]
+hooks = true
+
+[hooks.state]
+
+[hooks.state."/home/herve-m/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:86158a557cac09950cee19ceaef61866b3e8b18fd80112187601c3c53c58f239"
+
+[hooks.state."/home/herve-m/.codex/hooks.json:session_start:1:0"]
+trusted_hash = "sha256:41fc0cd012cfea9f75de96d0c6fce6e4dc4f97f87423b9e8c3dd3ffe7d0a36fd"
+
+[hooks.state."codex@openai-codex:hooks/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:e6b9df143de11443eb576c38874cf6e0c48358f948170948fdf630f1c047c098"
+
+[hooks.state."codex@openai-codex:hooks/hooks.json:session_end:0:0"]
+trusted_hash = "sha256:bc55a03ac0094c5deb4af95c405b75b34735f318b3d9bd64a2f9902973861606"
+
+[hooks.state."codex@openai-codex:hooks/hooks.json:stop:0:0"]
+trusted_hash = "sha256:3dfaa7e4f022570b260b8a8cf4ac7585c986175256b887a4723fac4f358a482f"
+
+
+[tui]
+status_line = ["git-branch", "model-with-reasoning", "context-window-size", "permissions", "approval-mode", "context-used", "five-hour-limit", "weekly-limit", "used-tokens"]
+status_line_use_colors = true
+screen_reader_detection_done = true
+
+[tui.model_availability_nux]
+"gpt-5.6-sol" = 1
+gpt-6-astra = 4
+"gpt-6.1-sol" = 4
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 8
+default_subagent_model = "gpt-5.6-terra"
+default_subagent_reasoning_effort = "medium"

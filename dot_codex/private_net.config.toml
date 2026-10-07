@@ -1,0 +1,132 @@
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+
+[shell_environment_policy.set]
+DOTNET_CLI_TELEMETRY_OPTOUT = "1"
+DOTNET_NOLOGO = "1"
+
+[plugins."dotnet@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-aspnetcore@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-data@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-diag@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-msbuild@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-nuget@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-test@dotnet-agent-skills"]
+enabled = true
+
+# mattpocock/skills
+[[skills.config]]
+name = "ask-matt"
+enabled = true
+
+[[skills.config]]
+name = "code-review"
+enabled = true
+
+[[skills.config]]
+name = "codebase-design"
+enabled = true
+
+[[skills.config]]
+name = "diagnosing-bugs"
+enabled = true
+
+[[skills.config]]
+name = "domain-modeling"
+enabled = true
+
+[[skills.config]]
+name = "grill-me"
+enabled = true
+
+[[skills.config]]
+name = "grill-with-docs"
+enabled = true
+
+[[skills.config]]
+name = "grilling"
+enabled = true
+
+[[skills.config]]
+name = "handoff"
+enabled = true
+
+[[skills.config]]
+name = "implement"
+enabled = true
+
+[[skills.config]]
+name = "improve-codebase-architecture"
+enabled = true
+
+[[skills.config]]
+name = "prototype"
+enabled = true
+
+[[skills.config]]
+name = "research"
+enabled = true
+
+[[skills.config]]
+name = "resolving-merge-conflicts"
+enabled = true
+
+[[skills.config]]
+name = "retro"
+enabled = true
+
+[[skills.config]]
+name = "setup-matt-pocock-skills"
+enabled = true
+
+[[skills.config]]
+name = "tdd"
+enabled = true
+
+[[skills.config]]
+name = "teach"
+enabled = true
+
+[[skills.config]]
+name = "to-questionnaire"
+enabled = true
+
+[[skills.config]]
+name = "to-spec"
+enabled = true
+
+[[skills.config]]
+name = "to-tickets"
+enabled = true
+
+[[skills.config]]
+name = "triage"
+enabled = true
+
+[[skills.config]]
+name = "wait-what"
+enabled = true
+
+[[skills.config]]
+name = "wayfinder"
+enabled = true
+
+[[skills.config]]
+name = "wizard"
+enabled = true
+
+[[skills.config]]
+name = "writing-for-agents"
+enabled = true

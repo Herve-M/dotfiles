@@ -1,0 +1,30 @@
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+
+[shell_environment_policy.set]
+DOTNET_CLI_TELEMETRY_OPTOUT = "1"
+DOTNET_NOLOGO = "1"
+
+[plugins."superpowers@openai-curated-remote"]
+enabled = true
+
+[plugins."dotnet@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-aspnetcore@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-data@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-diag@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-msbuild@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-nuget@dotnet-agent-skills"]
+enabled = true
+
+[plugins."dotnet-test@dotnet-agent-skills"]
+enabled = true
